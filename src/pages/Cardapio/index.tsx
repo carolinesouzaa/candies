@@ -7,6 +7,7 @@ import Filtros from './Filtros/index';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState("");
+  const [filtro, setFiltro] = useState<number | null>(null);
     return (
         <main>
             <nav className={styles.menu}>
@@ -15,14 +16,14 @@ export default function Cardapio() {
             </nav>
             <header className={styles.header}>
               <div className={styles.header__text}>
-                  Deixando sua vida mais doce!
+                  Deixando a sua vida mais doce!
               </div>
             </header>
             <section className={styles.cardapio}>
               <h3 className={styles.cardapio__titulo}>Cardápio</h3>
               <Buscador busca={busca} setBusca={setBusca}/>
               <div className={styles.cardapio__filtros}>
-                <Filtros/>
+              <Filtros filtro={filtro} setFiltro={setFiltro}/>
               </div>
             </section>
         </main>
