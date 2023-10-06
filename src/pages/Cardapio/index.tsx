@@ -11,13 +11,13 @@ export default function Cardapio() {
     return (
         <main>
             <nav className={styles.menu}>
-              <img src= { logo } alt="logo" />
-              <img src= { header } className={styles.headerImage} alt="header" />
+              <img src= { logo } className={styles.menu__image} alt="logo" />
             </nav>
             <header className={styles.header}>
               <div className={styles.header__text}>
-                  Deixando a sua vida mais doce!
+                Deixando a sua vida mais doce!
               </div>
+              <img src= { header } className={styles.header__image} alt="header" />
             </header>
             <section className={styles.cardapio}>
               <h3 className={styles.cardapio__titulo}>Cardápio</h3>
